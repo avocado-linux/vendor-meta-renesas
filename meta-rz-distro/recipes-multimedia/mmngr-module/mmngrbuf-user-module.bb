@@ -6,7 +6,7 @@ PN = "mmngrbuf-user-module"
 PR = "r0"
 RDEPENDS:${PN} = "kernel-module-mmngrbuf"
 
-S = "${WORKDIR}/git/libmmngr/mmngrbuf"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}/libmmngr/mmngrbuf"
 
 EXTRA_OECONF =  "${@bb.utils.contains("DISTRO_FEATURES", "mm-test", \
     " --enable-mmngrbuf-test", "", d)}"

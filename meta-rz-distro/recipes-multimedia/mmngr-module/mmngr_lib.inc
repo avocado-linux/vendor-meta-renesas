@@ -3,7 +3,7 @@ require include/rz-distro-common.inc
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "\
-    file://${WORKDIR}/git/COPYING.MIT;md5=30a99e0d36a3da1f5cf93c070ad7888a"
+    file://${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}/COPYING.MIT;md5=30a99e0d36a3da1f5cf93c070ad7888a"
 
 MMNGR_LIB_URI = "git://github.com/renesas-rz/mmngr_lib"
 

@@ -6,7 +6,7 @@ DEPENDS = "kernel-module-qos"
 PN = "qosif-user-module"
 PR = "r0"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 QOSIF_LIB_DIR = "qos_if-module/files/qos_if"
 
 EXTRA_OEMAKE = "ARCH=${TARGET_ARCH}"

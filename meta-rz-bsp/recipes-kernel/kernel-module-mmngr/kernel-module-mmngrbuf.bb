@@ -5,7 +5,7 @@ require mmngr_drv.inc
 PN = "kernel-module-mmngrbuf"
 PR = "r0"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 MMNGRBUF_DRV_DIR = "mmngr_drv/mmngrbuf/mmngrbuf-module/files/mmngrbuf"
 
 includedir = "/usr/local/include"

@@ -10,7 +10,7 @@ SRCREV = "93c06eee9526652b5adccca31abf442d866634d2"
 DEPENDS += "mmngrbuf-user-module"
 RDEPENDS:${PN} += "mmngrbuf-user-module"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 EXTRA_OEMESON:append = " \
     -Dignore-fps-of-video-standard=true \

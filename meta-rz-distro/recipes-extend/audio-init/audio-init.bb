@@ -7,16 +7,16 @@ SRC_URI:append = " \
     file://audio.sh \
     file://COPYING.MIT \
 "
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 inherit systemd
 
 do_install() {
     install -d ${D}${systemd_system_unitdir}
-    install -m 0644 ${WORKDIR}/audio-init.service ${D}${systemd_system_unitdir}/audio-init.service
+    install -m 0644 ${UNPACKDIR}/audio-init.service ${D}${systemd_system_unitdir}/audio-init.service
 
     install -d ${D}${bindir}
-    install -m 0755 ${WORKDIR}/audio.sh ${D}${bindir}/audio.sh
+    install -m 0755 ${UNPACKDIR}/audio.sh ${D}${bindir}/audio.sh
 }
 
 SYSTEMD_SERVICE:${PN} = "audio-init.service"

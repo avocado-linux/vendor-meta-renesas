@@ -10,7 +10,7 @@ SRCREV_FORMAT:smarc-rzg3l = "default_cyw-fmac-nvram"
 
 do_install:append:smarc-rzg3l() {
 	install -d ${D}${nonarch_base_libdir}/firmware/cypress
-	install -m 0644 ${WORKDIR}/cyw-fmac-nvram/cyfmac4373-sdio.2AE.txt \
+	install -m 0644 ${UNPACKDIR}/cyw-fmac-nvram/cyfmac4373-sdio.2AE.txt \
 		${D}${nonarch_base_libdir}/firmware/cypress/cyfmac4373-sdio.txt
 
 	install -d ${D}${nonarch_base_libdir}/firmware/brcm

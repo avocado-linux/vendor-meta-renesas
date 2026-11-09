@@ -8,4 +8,4 @@ SRC_URI:append = " \
 
 SRCREV = "160c3291156859b98bd7a5ad9e38f3ca01707dea"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"

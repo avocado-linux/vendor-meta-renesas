@@ -19,7 +19,7 @@ SRCREV = "b3a116d8ce68371cac21011ca3b3190ae3576987"
 
 SRC_URI = "${VSP2DRIVER_URL};branch=${BRANCH};protocol=https"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 SRC_URI:append = " \
     file://0001-vsp2driver-Change-return-type-of-platform_driver-rem.patch \

@@ -8,10 +8,10 @@ SRC_URI:append = " \
 "
 SRCREV = "66da448e0d15a4b1e7b638299092b4b549dba974"
 
-S  = "${WORKDIR}/git"
+S  = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 do_install:append() {
-    install -Dm 644 ${WORKDIR}/gstpbfilter.conf ${D}${sysconfdir}/gstpbfilter.conf
+    install -Dm 644 ${UNPACKDIR}/gstpbfilter.conf ${D}${sysconfdir}/gstpbfilter.conf
     sed -i "s/default/vspmfilter/g" ${D}/etc/gstpbfilter.conf
 }
 

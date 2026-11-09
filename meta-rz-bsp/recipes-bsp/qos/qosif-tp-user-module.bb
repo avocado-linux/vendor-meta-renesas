@@ -6,7 +6,7 @@ DEPENDS = "qosif-user-module"
 PN = "qosif-tp-user-module"
 PR = "r0"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 QOSIF_TP_DIR = "qos_if-tp-user/files/qos_if"
 
 includedir = "${RENESAS_DATADIR}/include"

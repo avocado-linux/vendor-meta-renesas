@@ -2,10 +2,10 @@ require trusted-firmware-a-renesas.inc
 
 COMPATIBLE_MACHINE = "(rzg3e-family|rzv2h-evk)"
 
-LIC_FILES_CHKSUM = "file://${WORKDIR}/git/docs/license.rst;md5=b2c740efedc159745b9b31f88ff03dde"
+LIC_FILES_CHKSUM = "file://${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}/docs/license.rst;md5=b2c740efedc159745b9b31f88ff03dde"
 PV = "2.7+git${SRCPV}"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 TFA_URI ?= "git://github.com/renesas-rz/rzg_trusted-firmware-a.git;protocol=https"
 TFA_REV:rzg3e-family = "01ca346330ed617fce814000c62ac7762eea4bdb"

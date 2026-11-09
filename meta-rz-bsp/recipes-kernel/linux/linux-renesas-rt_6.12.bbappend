@@ -31,10 +31,10 @@ do_download_firmware() {
 }
 
 do_download_firmware:rzg2h-family () {
-       install -m 755 ${WORKDIR}/r8a779x_usb3_v*.dlmem ${FIRMWARE_DIR}
-       install -m 755 ${WORKDIR}/regulatory* ${FIRMWARE_DIR}
+       install -m 755 ${UNPACKDIR}/r8a779x_usb3_v*.dlmem ${FIRMWARE_DIR}
+       install -m 755 ${UNPACKDIR}/regulatory* ${FIRMWARE_DIR}
        mkdir -p ${FIRMWARE_DIR}/ti-connectivity
-       install -m 755 ${WORKDIR}/TIInit_11.8.32.bts ${FIRMWARE_DIR}/ti-connectivity
+       install -m 755 ${UNPACKDIR}/TIInit_11.8.32.bts ${FIRMWARE_DIR}/ti-connectivity
 }
 addtask do_download_firmware after do_configure before do_compile
 

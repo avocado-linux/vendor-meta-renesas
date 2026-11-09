@@ -18,7 +18,7 @@ SRCREV = "1c184a8dafb2a95df89ce6cdcb1218a99252db42"
 
 SRC_URI = "${VSPM_DRV_URL};branch=${BRANCH};protocol=https"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 VSPM_DRV_DIR = "vspm-module/files/vspm"
 includedir = "/usr/local/include"
 

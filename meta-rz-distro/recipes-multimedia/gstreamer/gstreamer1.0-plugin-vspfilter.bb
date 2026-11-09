@@ -18,7 +18,7 @@ SRC_URI = " \
 
 SRCREV = "5984661366b7b0bdc79fb34b6dfbaaf9dba24623"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 
 inherit meson pkgconfig
@@ -42,7 +42,7 @@ FILES:${PN}-dbg = " \
 "
 
 do_install:append() {
-    install -Dm 644 ${WORKDIR}/${VSPFILTER_CONF} ${D}/etc/gstvspfilter.conf
+    install -Dm 644 ${UNPACKDIR}/${VSPFILTER_CONF} ${D}/etc/gstvspfilter.conf
 }
 
 RDEPENDS:${PN} = "kernel-module-vsp2driver gstreamer1.0 gstreamer1.0-plugins-base"

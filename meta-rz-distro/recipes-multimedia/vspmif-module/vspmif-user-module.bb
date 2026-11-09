@@ -7,7 +7,7 @@ PN = "vspmif-user-module"
 PR = "r0"
 RDEPENDS:${PN} = "kernel-module-vspmif mmngr-user-module"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 VSPMIF_LIB_DIR = "vspm_if-module/files/vspm_if"
 
 EXTRA_OEMAKE = "ARCH=${TARGET_ARCH}"

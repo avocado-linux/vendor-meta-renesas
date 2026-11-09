@@ -7,7 +7,7 @@ PN = "vspmif-tp-user-module"
 PR = "r0"
 RDEPENDS:${PN} = "vspmif-user-module mmngr-user-module"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 VSPMIF_TP_DIR = "vspm_if-tp-user/files/vspm_if"
 
 # Get Wordsize of test app and change their names later to avoid override

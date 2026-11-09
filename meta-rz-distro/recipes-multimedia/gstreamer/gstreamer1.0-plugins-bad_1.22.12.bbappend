@@ -17,7 +17,7 @@ SRC_URI:append:mali-family = " \
 
 SRCREV = "ceac55ae56085391caa2b8f460757ddd9b9233ed"
 
-S  = "${WORKDIR}/git"
+S  = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 DEPENDS += "bayer2raw virtual/libgles2 mmngr-user-module mmngrbuf-user-module"
 

@@ -5,7 +5,7 @@ require mmngr_drv.inc
 PN = "kernel-module-mmngr"
 PR = "r0"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 MMNGR_DRV_DIR = "mmngr_drv/mmngr/mmngr-module/files/mmngr"
 
 MMNGR_CFG:rzg3e-family ?= "MMNGR_RZG3E"

@@ -41,14 +41,14 @@ SRC_URI:smarc-rzg3l = "file://Flash_Writer_SCIF_RZG3L_SMARC_LPDDR4.mot"
 
 inherit deploy
 
-S:rzg2l-family = "${WORKDIR}/git"
-S:rzg2h-family = "${WORKDIR}/git"
-S:rzg3e-family = "${WORKDIR}"
-S:rzv2h-family = "${WORKDIR}"
-S:rzv2n-family = "${WORKDIR}"
-S:rzg3s-family = "${WORKDIR}/${BPN}"
-S:rzt2h-family = "${WORKDIR}"
-S:rzg3l-family = "${WORKDIR}"
+S:rzg2l-family = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
+S:rzg2h-family = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
+S:rzg3e-family = "${UNPACKDIR}"
+S:rzv2h-family = "${UNPACKDIR}"
+S:rzv2n-family = "${UNPACKDIR}"
+S:rzg3s-family = "${UNPACKDIR}/${BPN}"
+S:rzt2h-family = "${UNPACKDIR}"
+S:rzg3l-family = "${UNPACKDIR}"
 PMIC_BUILD_DIR = "${S}/build_pmic"
 
 do_compile:rzg2l-family() {

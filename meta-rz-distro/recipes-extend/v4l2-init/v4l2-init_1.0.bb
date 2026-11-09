@@ -10,7 +10,7 @@ SRC_URI = " \
 	file://COPYING.MIT \
 "
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 FILES:${PN} += " \
 	${systemd_unitdir}/system/v4l2-init.service \
@@ -18,5 +18,5 @@ FILES:${PN} += " \
 
 do_install:append() {
 	install -d ${D}/${systemd_unitdir}/system
-	install -m 0644 ${WORKDIR}/v4l2-init.service ${D}/${systemd_unitdir}/system
+	install -m 0644 ${UNPACKDIR}/v4l2-init.service ${D}/${systemd_unitdir}/system
 }

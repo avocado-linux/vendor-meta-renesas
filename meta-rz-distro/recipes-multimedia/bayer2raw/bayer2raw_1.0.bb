@@ -18,7 +18,7 @@ inherit pkgconfig
 
 DEPENDS = "virtual/libgles2"
 
-S = "${WORKDIR}/bayer2raw"
+S = "${UNPACKDIR}/bayer2raw"
 
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
 

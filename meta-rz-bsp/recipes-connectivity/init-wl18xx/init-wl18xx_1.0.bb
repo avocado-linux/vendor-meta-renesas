@@ -7,11 +7,11 @@ SRC_URI:append = " \
 	file://COPYING.MIT \
 "
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 do_install() {
         install -d ${D}/${sysconfdir}/profile.d
-        install -m 0644 ${WORKDIR}/wl18xx-init.sh ${D}/${sysconfdir}/profile.d/wl18xx-init.sh
+        install -m 0644 ${UNPACKDIR}/wl18xx-init.sh ${D}/${sysconfdir}/profile.d/wl18xx-init.sh
 }
 
 do_configure[noexec] = "1"

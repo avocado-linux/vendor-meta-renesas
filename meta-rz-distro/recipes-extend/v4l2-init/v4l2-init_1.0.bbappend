@@ -6,7 +6,7 @@ SRC_URI:append = " \
 
 do_install:append () {
 	install -d ${D}/root
-	install -m 0744 ${WORKDIR}/v4l2-init.sh ${D}/root/v4l2-init.sh
+	install -m 0744 ${UNPACKDIR}/v4l2-init.sh ${D}/root/v4l2-init.sh
 }
 
 FILES:${PN} += " /root/v4l2-init.sh "

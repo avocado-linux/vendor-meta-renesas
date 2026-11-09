@@ -9,7 +9,7 @@ SRC_URI:append = " \
 
 do_install() {
     install -d ${D}/${sysconfdir}/profile.d
-    install -m 0755 ${WORKDIR}/vspfilter-setting.sh ${D}/${sysconfdir}/profile.d/vspfilter-setting.sh
+    install -m 0755 ${UNPACKDIR}/vspfilter-setting.sh ${D}/${sysconfdir}/profile.d/vspfilter-setting.sh
 }
 
 do_configure[noexec] = "1"

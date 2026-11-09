@@ -24,7 +24,7 @@ SRC_URI = " \
 	file://0001-qos_drv-fix-conflict-with-newer-kernel-version.patch \
 "
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 QOS_DRV_DIR = "qos-module/files/qos/drv"
 
 includedir = "${RENESAS_DATADIR}/include"
